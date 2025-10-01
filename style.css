@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ffe4e1, #ffd1dc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background:  #fff0f5; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+}
+
+.task-input button {
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    gap: 5px; /* Added small gap between elements */
+}
+
+ul li span {
+    flex: 1; /* Task name takes remaining space */
+}
+
+ul li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0;
+    background: #28a745;
+}
+
+.edit-btn, .delete-btn {
+    margin-left: 5px; /* reduced margin slightly for better alignment */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: white;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #e0a800;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+ul li span.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+ul li span:hover {
+    background: #e6f0ff;  /* light blue highlight */
+    border-radius: 4px;
+    padding: 2px 4px;
+    cursor: pointer;
+}
+ul li.dragging {
+    opacity: 0.5;
+    background: #dfefff;
+}
+ul li.placeholder {
+    background: #d0e7ff;
+    border: 2px dashed #007bff;
+    height: 40px;
+    margin-bottom: 10px;
+}
+#clearCompletedBtn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    background: #6c757d; /* gray color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearCompletedBtn:hover {
+    background: #5a6268;
+}
+ul li {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content:  flex-start;
+  }
+  
+  .filter-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #3f97f6;
+    color: white;
+  }
+  
+  .filter-btn.active {
+    background: #0c63c0;
+  }
+  
+  .filter-btn:hover {
+    background: #0c63c0;
+  }
+  ul li.selected {
+    background: #cce5ff; /* light highlight */
+  }
+  #progressFill {
+    height: 100%;
+    width: 0;
+    background: #28a745;
+    transition: width 0.5s ease; /* smooth animation */
+}
+    
